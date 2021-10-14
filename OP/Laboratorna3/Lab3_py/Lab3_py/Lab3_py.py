@@ -15,5 +15,5 @@ while flag > E:
     flag = abs(result - last)
     last = result
 
-print("Результат обчислень за формулою: ", format(result, '.6f'))
-print("Результат обчислень стандартною функцією: ", format(log(a), '.6f'))
+print("Результат обчислень за формулою: ", result)
+print("Результат обчислень стандартною функцією: ", log(a))

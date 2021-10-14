@@ -1,6 +1,7 @@
 #include <iostream>
 #include <math.h>
 #define E 0.000001
+
 using namespace std;
 
 int main()
