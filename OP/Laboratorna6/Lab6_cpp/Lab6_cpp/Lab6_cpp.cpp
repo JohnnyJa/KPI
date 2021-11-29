@@ -1,18 +1,16 @@
-// Lab6_cpp.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 #include <math.h>
 
 using namespace std;
 
-double calculate_square_triangle(double a, double b, double c);
+double calculate_square_triangle(double, double, double);
 
-double calculate_max_square(double square1, double square2, double square3);
+double calculate_max_square(double, double, double);
 
-void input(double &a, double &b, double &c);
+void input(double&, double&, double&);
 
-void output(double square1, double square2, double square3, double answer);
+void output(double, double, double, double);
 
 
 
@@ -26,19 +24,21 @@ int main()
     input(a2, b2, c2);
     cout << "Введiть сторони третього трикутника\n";
     input(a3, b3, c3);
-    
-    //Обчислюємо площі трикутників
 
-    double square1 = calculate_square_triangle(a1, b1, c1);
+
+    double square1 = calculate_square_triangle(a1, b1, c1);                                         //Обчислюємо площі трикутників
     double square2 = calculate_square_triangle(a2, b2, c2);
-    double square3 = calculate_square_triangle(a3, b3, c3);
+    double square3 = calculate_square_triangle(a3, b3, c3);                 
 
-    //обчислюємо найбільшу площу
+
     
-    output(square1, square2, square3, calculate_max_square(square1, square2, square3) );
+    output(square1, square2, square3, calculate_max_square(square1, square2, square3) );            //Виводимо значення площ та обчислюємо найбільшу площу
    
     return 1;
 }
+
+
+
 
 double calculate_square_triangle(double a, double b, double c)
 {
@@ -73,7 +73,7 @@ void input(double &a, double &b, double &c)
     {
         f = false;
         cin >> a >> b >> c;
-        if ((a + b <= c) || (c + b <= a) || (a + c <= b))
+        if ((a + b <= c) || (c + b <= a) || (a + c <= b))                                                     //Перевіряємо, чи існує трикутник
         {
             f = true;
             cout << "Такого трикутника не iснує\n";

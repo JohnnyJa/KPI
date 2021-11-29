@@ -27,7 +27,7 @@ def inputValues():
         a = float(input())
         b = float(input())
         c = float(input())
-        if((a >= b + c) or (b >= a + c) or (c >= b + a)):
+        if((a >= b + c) or (b >= a + c) or (c >= b + a)):           #Перевіряємо, чи існує трикутнник
             print("Такого трикутника не існує")
             f = True
     return a, b, c
@@ -49,8 +49,12 @@ a2, b2, c2 = inputValues()
 print("Введіть сторони третього трикутника:")
 a3, b3, c3 = inputValues()
 
+#обчислюємо площі трикутників
+
 square1 = calculate_square_triangle(a1, b1, c1)
 square2 = calculate_square_triangle(a2, b2, c2)
 square3 = calculate_square_triangle(a3, b3, c3)
 
 output(square1, square2, square3, calculate_max_square(square1, square2, square3) )
+
+

@@ -1,0 +1,4 @@
+﻿  lab7_cpp.cpp
+C:\Worr\KPI\OP\Laboratorna7\lab7_cpp\lab7_cpp\lab7_cpp.cpp(21,19): warning C4101: 'difference_of_advantages': unreferenced local variable
+C:\Worr\KPI\OP\Laboratorna7\lab7_cpp\lab7_cpp\lab7_cpp.cpp(31,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  lab7_cpp.vcxproj -> C:\Worr\KPI\OP\Laboratorna7\lab7_cpp\Debug\lab7_cpp.exe
