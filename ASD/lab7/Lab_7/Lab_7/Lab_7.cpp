@@ -78,9 +78,10 @@ int initialize_third_array(char first_array[], char second_array[], char result_
 
 char product(char some_array[], int some_array_size)
 {
-    char product = some_array[0];
-    for (int i = 1; i < some_array_size; ++i)
+    int product = 1;
+    for (int i = 0; i < some_array_size; ++i)
     {
+        
         if (some_array[i] < 40) 
         {
             product *= some_array[i];

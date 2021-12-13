@@ -1,41 +1,52 @@
 
 #include <iostream>
-#include <iomanip>
 #include <time.h>
 
 using namespace std;
 
-void input(double[], int&);
 
-void output(double[], int, double, double);
+double* input(int&);
 
-void find_difference_of_adjacent(double[], int);
+void output(double, double);
+
+double* find_difference_of_adjacent(double[], int);
 
 double max(double[], int);
 
 double min(double[], int);
 
+
+
+
 int main()
 {
     setlocale(LC_ALL, "");
-    double B[10], difference_of_advantages[9];
+
     int size;
-    input(B, size);
-    find_difference_of_adjacent(B, size);
-    output(B, size, max(B, size), min(B, size));
+    double *B = input(size);
+
+    double *difference_of_advantages = find_difference_of_adjacent(B, size);
+
+    output(max(difference_of_advantages, size), min(difference_of_advantages, size));
+
     return 1;
 }
 
-void input(double B[], int& size)
+
+
+
+double* input(int& size)
 {
     srand(time(NULL));
     //srand(5);
 
-    cout << "Введiть розмiр массиву(<=10) ";
+    cout << "Введiть розмiр массиву ";
     cin >> size;
 
     cout << "Массив:\n";
-    
+
+    double* B = new double[size];
+  
     double random_value_1, random_value_2, t;
     
     for (int i = 0; i < size; ++i) 
@@ -49,19 +60,25 @@ void input(double B[], int& size)
         }
 
         t = (int)((random_value_1 / random_value_2) * 1000);                        //Округлення числа до тисячних
-        B[i] = t / 1000;
+        *(B+i) = t / 1000;
 
-        cout << B[i] << setprecision(3) << ' ';
+        cout << *(B+i)  << ' ';
     }
-    cout << "\n";
+    cout << "\n\n";
+    return B;
 }
 
-void find_difference_of_adjacent(double B[], int size)
+double* find_difference_of_adjacent(double B[], int size)
 {
+    double* difference_of_adjacent = new double[size - 1];
+    cout << "Массив модулiв рiзниць сусiднiх елементiв: \n";
     for (int i = 0; i < size-1; ++i) 
     {
-        B[i] = abs(B[i] - B[i + 1]);
+        *(difference_of_adjacent + i) = abs(B[i] - B[i + 1]);
+        cout << *(difference_of_adjacent + i) << ' ';
     }
+    cout << "\n\n";
+    return difference_of_adjacent;
 }
 
 double max(double B[], int size)
@@ -84,7 +101,7 @@ double min(double B[], int size)
     return min;
 }
 
-void output(double B[], int size, double max, double min)
+void output(double max, double min)
 {
     cout << "Найбiльша рiзниця двох сусiднiх чисел: " << max << '\n';
     cout << "Найменша рiзниця двох сусiднiх чисел: " << min << '\n';
