@@ -1,0 +1,2 @@
+C:\Worr\KPI\OP\Lab1\x64\Debug\Lab1.exe
+C:\Worr\KPI\OP\Lab1\Lab1_cpp\x64\Debug\Lab1.exe
