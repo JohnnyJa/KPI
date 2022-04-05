@@ -4,7 +4,7 @@ import random
 def generateRandomArray(size):
     array = []
     for i in range(size):
-        array.append(random.randint(0, 100))
+        array.append(random.randint(0, size*10))
     return array
 
 def generateSortedArray(size):
@@ -68,7 +68,7 @@ def combSort(array):
 
         for j in  range(0, size - step):
             numOfCompare += 1
-            if(array[j]>array[j + step]):
+            if(array[j]<array[j + step]):
                 numOfTranspose += 1 
                 array[j], array[j + step] = array[j + step],array[j]
                 isSorted = False

@@ -17,14 +17,14 @@ def main():
     classicBubbleArray = arr[:]
     compare, transpose = Functions.classicBubbleSort(classicBubbleArray)
 
-    print("Classic Bubble sorted arr: ")
-    Functions.output(classicBubbleArray, compare, transpose)
+    # print("Classic Bubble sorted arr: ")
+    # Functions.output(classicBubbleArray, compare, transpose)
 
     #
     # -------------------------------------------------------------------------------------------
 
-    improvedBubbleArray = arr[:]
-    compare, transpose = Functions.improvedBubbleSort(improvedBubbleArray)
+    # improvedBubbleArray = arr[:]
+    # compare, transpose = Functions.improvedBubbleSort(improvedBubbleArray)
 
     print("Improved Bubble sorted arr: ")
     Functions.output(improvedBubbleArray, compare, transpose)
