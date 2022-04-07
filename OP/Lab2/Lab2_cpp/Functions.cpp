@@ -7,10 +7,10 @@
 
 void WriteNewData()
 {
-	string path = "AllProductList.dat";
+
 	TProduct NewList;
 	int ProductsNum;
-	ofstream OutFile(path, ios::binary | ios::out);
+	ofstream OutFile("AllProductList.dat", ios::binary | ios::out);
 	cout << "Input number of products: ";
 	cin >> ProductsNum;
 	cin.ignore();
